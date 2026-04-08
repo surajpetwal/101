@@ -1,0 +1,18 @@
+{
+   "name ": "Tracker App Dev"
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+    "features": {
+"ghcr.io/devcontainers/features/github-cli:1": {}
+},
+"customization":{
+"vscode": {
+"extensions": [
+"dbaeumer.vscode-eslint",
+
+"ms-vscode.vscode-typescript-nect",
+"bradlc.vsccode-tailwindcss"
+]
+}
+},
+"postCreatecommand": "npm install"
+}
