@@ -1,22 +1,31 @@
 {
-  "name": "habit-tracker",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "echo \"No dev server configured yet. Update package.json with your app's dev command.\""
+  "name": "Android Tracker App",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/gradle-sdkman:2": {
+      "version": "latest",
+      "jdkVersion": "11",
+      "jdkDistro": "ms"
+    },
+    "ghcr.io/devcontainers-contrib/features/kotlin-sdkman:2": {
+      "version": "latest",
+      "jdkVersion": "11",
+      "jdkDistro": "ms"
+    },
+    "ghcr.io/jarrodcolburn/features/android-sdk:0": {
+      "platforms": "33",
+      "build-tools": "34.0.0"
+    }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/surajpetwal/101.git"
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.android",
+        "redhat.java",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test"
+      ]
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/surajpetwal/101/issues"
-  },
-  "homepage": "https://github.com/surajpetwal/101#readme"
+  "postCreateCommand": "echo 'Android dev env ready for habit-tracker'"
 }
